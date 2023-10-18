@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Cadastral - ETEC</title>
+    <style>
+        button {
+            background-color: blue;
+            font-size: 20px;
+        }
+
+        .input-100 {
+            width: 100%;
+        }
+
+        .input-apelido {
+            width: 100%;
+        }
+
+        .input-email {
+            width: 50%;
+        }
+
+        body {
+            background-color: rgb(231, 229, 159);
+        }
+
+        h1 {
+            background-color: blueviolet;
+        }
+
+        .input-50 {
+            width: 50%;
+        }
+
+        .input-20 {
+            width: 20%;
+        }
+
+        #CPF-cor-fundo {
+            background-color: rgb(231, 229, 159);
+            border-collapse: 1px;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid blue;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+background-color: khaki;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ficha Cadastral - Vestibulinho ETEC</h1>
+    <form action="cadastroEtec">
+        <fieldset>
+            <legend>1 - Identificação</legend>
+            <label>Código: </label>
+            <br>
+            <input type="number" min="1" max="100" required>
+            <br><br>
+            <label>Nome: </label>
+            <br>
+            <input required class="input-100">
+            <br><br>
+            <label>Apelido:</label>
+            <br>
+            <input class="input-apelido">
+            <br><br>
+            <label>Email: </label>
+            <br>
+            <input required class="input-50">
+            <br><br>
+            <label>Data de Nascimento:</label>
+            <br>
+            <input required type="date" class="input-20">
+            <br><br>
+            <label>CPF: </label>
+            <br>
+            <input required class="input-20" id="CPF-cor-fundo">
+            <br><br>
+            <label>RG: </label>
+            <br>
+            <input class="input-20">
+            <br><br>
+            <label>UF: </label>
+            <br>
+            <select>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AP</option>
+                <option>AM</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MT</option>
+                <option>MS</option>
+                <option>MG</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PR</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RJ</option>
+                <option>RN</option>
+                <option>RS</option>
+                <option>RO</option>
+                <option>RR</option>
+                <option>SC</option>
+                <option>SE</option>
+                <option selected>SP</option>
+                <option>TO</option>
+            </select>
+            <br><br>
+            <label>Município: </label>
+            <br>
+            <input required class="input-50">
+            <br><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>2 - Dados do Curso:</legend>
+            <label>Selecione o curso desejado:</label>
+            <br>
+            <input type="radio" name="curso">Desenvolvimento de Sistemas
+            <input type="radio" name="curso">Elétrica
+            <input type="radio" name="curso">Enfermagem
+            <input type="radio" name="curso" checked>Mecânica
+            <input type="radio" name="curso">Mecatrônica
+            <label>Selecione o período desejado:</label>
+            <br>
+            <input type="radio" name="periodo">Manhã
+            <input type="radio" name="periodo">Tarde
+            <input type="radio" name="periodo" checked>Noite
+            <br><br><br>
+            <label id="preferenciaMateria">Selecione as disciplinas de sua preferência: </label>
+            <br>
+            <input type="checkbox">Arte
+            <input type="checkbox">Educação Física
+            <input type="checkbox">Filosofia
+            <input type="checkbox">Sociologia
+            <input type="checkbox">Inglês
+            <input type="checkbox">Física
+            <input type="checkbox">Química
+            <input type="checkbox">Biologia
+            <input type="checkbox">Geografia
+            <input type="checkbox">História
+            <input type="checkbox">Matemática
+            <input type="checkbox">Português
+        </fieldset>
+        <fieldset>
+            <legend>3 - Orientações</legend>
+            <br>
+            <label>Realização da Prova</label>
+            <br>
+            <ol>
+                <li>
+                    <label>Data: 13/03/2023</label>
+                </li>
+                <li>
+                    <label>Horário: 19:00</label>
+                </li>
+                <li>
+                    <label>Local: Etec</label>
+                </li>
+            </ol>
+            <br>
+            <label>Favor trazer os seguintes itens para a realização da prova:</label>
+            <ul>
+                <li>Lápis</li>
+                <li>Borracha</li>
+                <li>Caneta Azul ou Preta</li>
+            </ul>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Referência Familiar</legend>
+            <table id="tabela" border="1"> <a href="#formulario"></a>
+                <tr>
+                    <th>Parentêsco</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+                <tr>
+                    <td>Pai</td>
+                    <td>Flávio de Arruda</td>
+                    <td>(16)9.9876-5432</td>
+                </tr>
+                <tr>
+                    <td>Mãe</td>
+                    <td>Silvia de Arruda</td>
+                    <td>(16)9.1234-5678</td>
+                </tr>
+                <tr>
+                    <td>Avó</td>
+                    <td>Isabel Silva</td>
+                    <td>(16)9.9741-5896</td>
+                </tr>
+            </table>
+            <hr>
+            <button type="submit">Confirmar</button>
+            <button type="reset">Cancelar</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
